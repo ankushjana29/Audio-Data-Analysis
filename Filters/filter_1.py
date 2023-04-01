@@ -31,20 +31,21 @@ for i,f in enumerate(fft_spectrum_abs):
     if i >= 200 and i<200000:
         print('frequency = {} Hz with amplitude {} '.format(np.round(freq[i],1),  np.round(f)))
         
-max=[0]
+
 for i,f in enumerate(fft_spectrum_abs):
     if i >= 200 and i<200000: #frequency range 
         if(f > max):    
-           max = f;
-print('Max Amplitude={}'.format(np.round(max)))
+           max = f
+           k=i
+print('Max Amplitude={}'.format(np.round(max)) + ' with Frequency='+str(k))
 
-max=0
+
 for i,f in enumerate(fft_spectrum_abs):
     if i >= 200 and i<200000: #frequency range 
-      if(i > max):    
+      if(i > max and f>5):    
         max = i
-print('Max Frequency='+ str(max)))))
-
+        k=f
+print('Max Frequency={}'.format(np.round(max)) + ' with Amplitude='+str(k))
 
 plt.plot(freq[:30000], np.abs(fft_spectrum[:30000]))
 plt.xlabel("frequency, Hz")
