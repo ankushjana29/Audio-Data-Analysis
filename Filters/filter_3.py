@@ -48,7 +48,7 @@ fft_spectrum = np.fft.rfft(audio1_lr)
 fft_spectrum1 = np.fft.rfft(y)
 
 freq = np.fft.rfftfreq(audio1_lr.size, d=1./sr)
-freq1 = np.fft.rfftfreq(audio1_lr.size, d=1./sr)
+freq1 = np.fft.rfftfreq(y.size, d=1./sr)
 
 plt.plot(freq, np.abs(fft_spectrum))
 plt.xlabel("frequency, Hz")
