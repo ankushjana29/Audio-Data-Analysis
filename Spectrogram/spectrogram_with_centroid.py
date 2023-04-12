@@ -15,10 +15,6 @@ print("Enter the output folder path:")
 out_path=input()
 plot_folder = (out_path)
 
-# Create the output folder if it doesn't already exist
-if not os.path.exists(plot_folder):
-    os.makedirs(plot_folder)
-
 # List all the audio files in the folder
 audio_files = [os.path.join(audio_folder, file) for file in os.listdir(audio_folder)
                if file.endswith('.wav')]
