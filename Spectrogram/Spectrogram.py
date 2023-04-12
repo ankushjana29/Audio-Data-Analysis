@@ -3,6 +3,7 @@ import IPython.display as ipd
 import matplotlib.pyplot as plt
 from librosa.display import specshow
 
+#mention the path
 audio=("/home/audio/Asian_Koel.wav")
 x,sr=lr.load(audio)
 
